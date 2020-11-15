@@ -4,19 +4,19 @@
 - TeXWorksが嫌い．
 ## Require
 - Windows 10
-- Vimの使い方を多少知ってる
+- Vimの使い方を多少知っている
 ## やること
-0. AtomとVimを入れる
+0. 好きなエディタを入れる
 1. TeXLiveを入れる
 2. TeXのコンパイルができるかテスト
 3. Strawberry Perlを入れる
 4. .latexmkrcを作る
 5. latexmkが使えるかテスト
-### AtomとVimを入れる
-- 私はTeXを書くときにAtomエディタを使うので，入れました．
-    - Git管理も楽 (GitHubが作ってる)
-- PowerShellで使えるエディタを入れたいなということで，Vimを入れました．
-    - EmacsよりVimが好き
+### 好きなエディタを入れる
+- 私はTeXを書くときにAtomエディタを使うので，それを入れた．
+    - Git管理も楽 (GitHubが作ってるので)
+- ターミナルで使えるエディタを入れたいので，Vimを入れた．
+    - EmacsよりVimが好きなので
 #### Atomの導入
 - 流れ
     - Atomと検索し，ダウンロード → インストール．
@@ -26,7 +26,7 @@
         - latexer
         - pdf-view
 #### Vimの導入
-- https://qiita.com/Futo_Horio/items/21456f8acbad3c6bb442 を参考にしました．
+- https://qiita.com/Futo_Horio/items/21456f8acbad3c6bb442 を参考にした．
 
 - 要約すると，
     - KaoriYaのVimをインストールする
@@ -53,9 +53,9 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
 ![texlive](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/Windows_latex/texlive.PNG "TeXLiveのインストール")
 
 - install-tl-windows を右クリック．『管理者として実行』
-    - TeXWorksをインストールにチェックが入ってるけど，外しましょう．要りません．
+    - TeXWorksをインストールにチェックが入っているが，使わなければチェックを外しても良いと思う．
 - 待つ (たぶん1時間はかからないと思う)．
-- 特に何もしなくてもパスが通ってるみたいです．
+- 特に何もしなくてもパスが通っているようである．
 
 ### TeXのコンパイルができるかテスト
 - 適当なディレクトリに適当なtexソースコードを作る (e.g. test.tex) ．
@@ -67,10 +67,10 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
 
 
 ### Strawbery Perlを入れる
-- WindowsはデフォルトではPerlを使えないので，インストールします．
+- WindowsはデフォルトではPerlを使えないので，インストールする．
     - http://strawberryperl.com/
     - 64bitの方
-- 特に何もしなくてもパスが通ってるみたいです．
+- 特に何もしなくてもパスが通ってるようである．
 
 ### .latexmkrcを作る
 - ホームディレクトリ直下で，以下のコマンドで，新しく".latexmkrc"ファイルを作る．
@@ -78,7 +78,7 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
     vim .latexmkrc
     ```
 - "i"を押して挿入モードにして，以下のコマンド列を記述する (copy and pasteでも良い)
-    ```
+    ```perl
     #!/usr/bin/env perl
     $latex = 'platex -guess-input-enc -src-specials -interaction=nonstopmode -synctex=1';
     $latex_silent = 'platex -interaction=batchmode';
