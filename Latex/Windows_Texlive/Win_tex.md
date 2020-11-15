@@ -35,7 +35,7 @@
     - パスを通す
         - 『ここに入力して検索』で『環境変数』と調べ，『ユーザー環境変数』の中の変数Pathで『編集』．以下を追加．
 
-![vim_path](./vim_path.png "VimのPathを通す")
+![vim_path](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/Windows_latex/vim_path.PNG "VimのPathを通す")
 
 - これでPowerShellからvimが使えるようになる．
 
@@ -50,7 +50,7 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
 
 - ISOイメージをダウンロードして，ダブルクリック
 
-![texlive](./texlive.png "TeXLiveのインストール")
+![texlive](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/Windows_latex/texlive.PNG "TeXLiveのインストール")
 
 - install-tl-windows を右クリック．『管理者として実行』
     - TeXWorksをインストールにチェックが入ってるけど，外しましょう．要りません．
@@ -92,7 +92,7 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
     $pdf_update_method = 4;
     ```
 
-![latexmk](./latexmk.png "latexmk")
+![latexmk](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/Windows_latex/latexmk.PNG "latexmk")
 
 - Escを押してノーマルモードにする．
 - ノーマルモードの状態で，":wq"と打って，保存して終了．
@@ -110,7 +110,7 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
 - また，一番左のProjectから今のディレクトリにあるファイルが見れる → 図の挿入のときのパスを楽に調べられる．
 - Git連携が楽．
 
-![atom](./testtex.png "AtomによるTeX文書作成環境")
+![atom](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/Windows_latex/testtex.PNG "AtomによるTeX文書作成環境")
 
 ## おわりに
 - Atom + latexmkで良いTeX Lifeを．
