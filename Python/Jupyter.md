@@ -19,3 +19,6 @@
     python -m ipykernel install --user --name=<name>
     ```
     - \<name>は適当な名前 (e.g. "Py_env_39")
+- VSCodeの拡張機能 (Jupyter) をinstall
+- 例: Py_env_39という仮想環境でkernel名がPy_env_39
+    ![vim_path](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/vscode_jupyter/jupyter.png "VsCodeでJupyter")

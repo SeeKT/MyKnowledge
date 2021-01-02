@@ -4,3 +4,5 @@
 - UbuntuとWindowsにそれぞれTeXLiveを入れて，latexmkを使って保存する度にplatex → dvipdfmxでpdfを作ってくれるようにした．そのときのメモ．
 ### Python
 - B4から使っているPythonの開発環境についてのメモ．
+### SSH
+- SSH接続あたりのメモ．

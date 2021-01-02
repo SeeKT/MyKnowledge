@@ -111,6 +111,3 @@ Windows 10, Windows 8.1 では基本機能で ISO イメージの中身を見る
 - Git連携が楽．
 
 ![atom](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/Windows_latex/testtex.PNG "AtomによるTeX文書作成環境")
-
-## おわりに
-- Atom + latexmkで良いTeX Lifeを．
