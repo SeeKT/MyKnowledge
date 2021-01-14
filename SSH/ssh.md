@@ -59,3 +59,14 @@
 - 左下の"Open a Remote Window" → Connect to the host → 先ほど設定したもの → パスワードを入力
     ![kvm_config](https://raw.githubusercontent.com/SeeKT/MyKnowledge/images/vm_ssh/ssh_vscode.png "VSCodeで接続")
     - 普段VSCodeを使っているときのような使用感でSSH接続先のファイルを編集できる
+
+## おまけ
+### ファイルのやり取り
+- ローカルからリモート
+    ```
+    scp (-r) [local path] [user@remotehost:path]
+    ```
+- リモートからローカル
+    ```
+    scp (-r) [user@remotehost:path] [local path]
+    ```
