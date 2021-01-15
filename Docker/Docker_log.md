@@ -1,8 +1,8 @@
 # 自分のためのPython環境を作るためにDockerを使う (1)
 ## 背景
-- WSL2でDockerが便利になったみたいです
+- WSL2でDockerが便利になったみたいです．
 - これまでPythonの仮想環境は手作業でやってたけど，シェルスクリプトかDockerfile作れば楽だろうなと思いました．
-- 今回はDockerの練習ついでにDockerを用いた環境構築をしてみます．
+- 今回はDockerの練習ついでにDockerを用いた環境構築を試行錯誤しながら行ってみます．
 ## 環境
 ### ホスト
 - Windows10 Home
@@ -187,7 +187,42 @@ ubuntu20
     >>> import matplotlib.pyplot as plt
     ```
     - 一応上手くいってるみたいです．
-## その他
+## 他の環境から同じDockerfileで環境を作れるのかの確認
+- WSL2上では作ることができましたが，他の環境にDockerfileを持っていったときにどうなるのかということが気になったので．作れるとは思うけど．
+### テスト環境
+- OS: Ubuntu18.04
+- Docker導入済み
+    - 参考: https://www.kkaneko.jp/tools/docker/ubuntu_docker.html
+- イメージの作成
+    ```
+    $ docker build -t ubuntu_python .
+    ...
+    Successfully tagged ubuntu_python:latest
+    ```
+- 確認
+    ```
+    $ docker images
+    REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+    ubuntu_python       latest              9126b7a156f8        About a minute ago   1.13GB
+    ```
+    たぶん作れてます．
+- コンテナの作成と起動
+    ```
+    $ docker run -it -d --name ubuntu_test_pyenv ubuntu_python
+    $ docker ps -a
+    CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+    1d6caac9b817        ubuntu_python       "/bin/bash"         9 seconds ago       Up 8 seconds                            ubuntu_test_pyenv
+    ```
+- ログイン
+    ```
+    $ docker exec -it ubuntu_test_pyenv /bin/bash
+    root@1d6caac9b817:/# ls
+    Python_env  boot  etc   lib    lib64   media  opt   root  sbin  sys  usr
+    bin         dev   home  lib32  libx32  mnt    proc  run   srv   tmp  var
+    ```
+- 同じ環境が作れると思います．
+## まとめと目標
+- Dockerfileを作って環境構築するところまでできたと思う．
 - ホームディレクトリにユーザディレクトリを作って，その直下で作業するのと，sudo権限与えるのとかをやりたい．
 ## 余談
 - Ubuntu18でapt installでpipを入れると
@@ -198,3 +233,4 @@ ubuntu20
 - だから研究室のUbuntu18にはapt経由ではなく，curlで入手したget-pip.py経由でpipを入れていました．
 - Ubuntu20ではapt経由で入れてもpip 20が入るので良かったです．
     - (ただ，gccのバージョンが新しすぎて対応していないプログラムでエラーが出たり...)
+    - ノートパソコンにUbuntu20を入れていたのですが，ちょくちょく落ちたり，書き込みエラーになったりしていたので，ノートパソコンに入れるOSはUbuntu18にしました．
