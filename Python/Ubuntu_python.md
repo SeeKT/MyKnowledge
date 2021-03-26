@@ -1,4 +1,5 @@
 # UbuntuにPython + Pipenvで仮想環境を作る
+- Pyenv使った方いい (追記: 2021/3/27)
 ## はじめに
 - UbuntuにPipenvを入れたときのメモ
 - PipとPip3を共存させたかった
